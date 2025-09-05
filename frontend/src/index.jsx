@@ -1,10 +1,10 @@
-import { StrictMode } from 'react'
-import { createRoot } from 'react-dom/client'
-import './index.css'
-import App from './components/App.jsx'
+/* eslint-disable functional/no-expression-statement */
+import ReactDOM from 'react-dom/client';
+import init from './init.jsx';
 
-createRoot(document.getElementById('root')).render(
-  <StrictMode>
-    <App />
-  </StrictMode>,
-)
+const app = async () => {
+  const root = ReactDOM.createRoot(document.querySelector('#chat'));
+  root.render(await init());
+};
+
+app();
