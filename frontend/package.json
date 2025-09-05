@@ -7,7 +7,7 @@
     "dev": "vite",
     "start": "npx start-server -s ./dist",
     "build": "vite build",
-    "serve": "vite preview"
+    "preview": "vite preview"
   },
   "eslintConfig": {
     "extends": [
