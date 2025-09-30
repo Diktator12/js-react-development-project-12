@@ -44,16 +44,16 @@ const LoginForm = () => {
         actions.setSubmitting(false)
       }}
     >
-      {(props) => (
+      {({ handleSubmit, isSubmitting }) => (
         <Form className="col-12 col-md-6 mt-3 mt-mb-0" 
-          onSubmit={props.handleSubmit} 
-          disabled={props.isSubmitting}>
+          onSubmit={handleSubmit} 
+          disabled={isSubmitting}>
           <h1 className="text-center mb-4">{t('enter')}</h1>
           <div className="form-floating mb-3">
             <Field
               name="username"
               autoComplete="username"
-              ref={inputRef}
+              innerRef={inputRef}
               required
               placeholder={t('login')}
               id="loginUsername"
